@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Accessibility Service Details – AppLocker</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="How AppLocker uses Android's Accessibility Service: purpose, data handling, consent, enable/disable instructions, and FAQs." />
+  <style>
+    :root{
+      --brand:#F64C17;
+      --ink:#111;
+      --ink-dim:#444;
+      --bg:#fff;
+      --muted:#f7f7f7;
+      --ok:#0b7;
+      --warn:#b60;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      color:var(--ink);
+      background:var(--bg);
+      line-height:1.6;
+    }
+    header{
+      background:var(--brand);
+      color:#fff;
+      padding:32px 20px;
+    }
+    header .wrap, main .wrap, footer .wrap{
+      max-width:880px;
+      margin:0 auto;
+      padding:0 8px;
+    }
+    h1{font-size:1.9rem;margin:0 0 6px}
+    h2{font-size:1.4rem;margin:28px 0 10px}
+    h3{font-size:1.1rem;margin:20px 0 8px}
+    p{margin:10px 0}
+    code,kbd{font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, monospace}
+    .card{
+      background:#fff;
+      border:1px solid #eee;
+      border-radius:14px;
+      padding:18px;
+      box-shadow:0 1px 2px rgba(0,0,0,.04);
+      margin:12px 0;
+    }
+    .muted{color:var(--ink-dim)}
+    .tag{display:inline-block;padding:2px 8px;border-radius:999px;font-size:.8rem;background:var(--muted);color:var(--ink-dim)}
+    .list{padding-left:18px}
+    .ok{color:var(--ok);font-weight:600}
+    .warn{color:var(--warn);font-weight:600}
+    .cta{
+      display:inline-block;
+      background:var(--brand);
+      color:#fff;
+      text-decoration:none;
+      padding:10px 16px;
+      border-radius:12px;
+      font-weight:600;
+      box-shadow:0 2px 6px rgba(246,76,23,.3);
+    }
+    .kbd{
+      display:inline-block;
+      padding:2px 6px;
+      border:1px solid #ccc;
+      border-bottom-width:2px;
+      border-radius:6px;
+      background:#fafafa;
+      font-size:.9rem;
+      font-family:ui-monospace, Menlo, Consolas, monospace;
+    }
+    footer{
+      margin-top:28px;
+      padding:22px 0 32px;
+      border-top:1px solid #eee;
+      background:#fff;
+    }
+    nav.breadcrumb{font-size:.9rem;margin-top:8px}
+    nav.breadcrumb a{color:#fff;opacity:.9;text-decoration:underline}
+    .grid{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:12px;
+    }
+    @media (min-width: 760px){
+      .grid{grid-template-columns:1fr 1fr}
+    }
+    .disclosure-box{border-left:6px solid var(--brand);padding-left:12px}
+  </style>
+  <!-- Optional structured data to help reviewers -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Accessibility Service Details – AppLocker",
+    "description": "Prominent disclosure of AccessibilityService use, consent, data handling, and user controls for AppLocker.",
+    "about": {
+      "@type": "SoftwareApplication",
+      "name": "AppLocker",
+      "applicationCategory": "SecurityApplication"
+    }
+  }
+  </script>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <h1>Accessibility Service Details</h1>
+      <nav class="breadcrumb">
+        <a href="/">Home</a> › Accessibility Details
+      </nav>
+      <p class="muted">Last updated: <strong>October 13, 2025</strong></p>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <div class="card disclosure-box">
+        <h2>Prominent Disclosure</h2>
+        <p><strong>AppLocker</strong> uses Android’s <em>Accessibility Service</em> <span class="tag">only</span> to detect when a protected app is opened and to display a lock screen for your security.</p>
+        <p class="ok">We do not read, collect, store, or share your on-screen content or personal data. No advertising or tracking uses this permission.</p>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Purpose & Scope</h3>
+          <ul class="list">
+            <li>Detects foreground app transitions (e.g., when you open an app you’ve protected).</li>
+            <li>Shows a secure lock screen overlay when a protected app is detected.</li>
+            <li>Used strictly for app-lock functionality; no other automation or assistance features.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Data Handling</h3>
+          <ul class="list">
+            <li>Processes minimal event data such as the <em>package name</em> of the foreground app.</li>
+            <li>Event data is handled <strong>locally on your device</strong>; it is not transmitted to our servers.</li>
+            <li>No screenshots, key presses, text, or content from your screen are captured or stored.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="grid">
+        <div class="card">
+          <h3>Consent & Control</h3>
+          <ul class="list">
+            <li>Enabling the service is <strong>optional</strong> and requires your <strong>explicit consent</strong> in-app (checkbox + “I Agree”).</li>
+            <li>Navigating away (back/home/tap outside) is treated as <span class="warn">no consent</span>.</li>
+            <li>You can disable the permission anytime in system settings.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>How to Enable / Disable</h3>
+          <ol class="list">
+            <li>Open <span class="kbd">Settings</span> → <span class="kbd">Accessibility</span>.</li>
+            <li>Find <span class="kbd">AppLocker</span> under downloaded apps.</li>
+            <li>Toggle the service <span class="ok">On</span> to enable or <span class="warn">Off</span> to disable.</li>
+          </ol>
+          <p class="muted">Exact path may vary by device/OS version.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Why We Need Accessibility (Instead of Other APIs)</h3>
+        <p>Android restricts background detection of which app is currently in the foreground. Accessibility events allow AppLocker to reliably know when a protected app becomes active so we can present the lock screen at the right moment.</p>
+      </div>
+
+      <div class="card">
+        <h3>Your Choices</h3>
+        <ul class="list">
+          <li>Use AppLocker without the Accessibility permission (core app works, app-locking features may be limited).</li>
+          <li>Enable the permission for full app-locking protection.</li>
+          <li>Revoke the permission anytime in system settings.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Contact & Policies</h3>
+        <p>Questions or concerns? Email us at <a href="mailto:support@yourdomain.com">support@yourdomain.com</a>.</p>
+        <p>See our <a href="https://yourdomain.com/privacy" target="_blank" rel="noopener">Privacy Policy</a> for more information.</p>
+      </div>
+
+      <p><a class="cta" href="app://open-consent-flow">Open consent screen in the app</a></p>
+      <p class="muted">Note: The button above is an example deep link. Replace with your actual app link if you use one.</p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p class="muted">© <span id="y"></span> AppLocker</p>
+    </div>
+  </footer>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
