@@ -20,6 +20,18 @@
     .footer{margin-top:28px; color:var(--muted); font-size:.95rem}
     .brand{display:flex; align-items:center; gap:12px; margin-bottom:18px;}
     .badge{background:rgba(246,76,23,.12); color:var(--accent); border:1px solid rgba(246,76,23,.35); padding:4px 10px; border-radius:999px; font-weight:600; font-size:.85rem}
+    .important {
+      background: rgba(246, 76, 23, 0.08);
+      border-left: 4px solid var(--accent);
+      padding: 16px 18px;
+      border-radius: 8px;
+      margin: 18px 0;
+      color: var(--text);
+      line-height: 1.7;
+    }
+    .important strong {
+      color: var(--accent);
+    }
   </style>
 </head>
 <body>
@@ -43,7 +55,21 @@
       </ul>
 
       <h2>3. Permissions &amp; Accessibility</h2>
-      <p>The App requires certain Android permissions (e.g., Accessibility Service, Usage Access, Overlay) to function correctly. You must explicitly grant these permissions in system settings. The App may read limited on-screen information or detect foreground apps strictly to provide app-lock functionality. We do not use these permissions for advertising or data sales.</p>
+
+      <div class="important">
+        ⚠️ <strong>AccessibilityService Disclosure:</strong><br><br>
+        The App uses the <strong>AccessibilityService API</strong> to provide essential functionality — detecting when a protected app is opened and locking it with a secure screen.<br><br>
+        This permission is <strong>optional</strong> and only activated after your explicit consent. You must manually enable it in your device’s system settings.<br><br>
+        The service <strong>does not record, transmit, or share</strong> any user actions or screen content. All processing happens entirely on your device.<br><br>
+        AppLocker never uses Accessibility capabilities for advertising, analytics, or any data collection.
+      </div>
+
+      <p>The App may also request:</p>
+      <ul>
+        <li><strong>Usage Access</strong> — to identify which app is currently open and apply protection rules.</li>
+        <li><strong>Overlay (“Draw over other apps”)</strong> — to display a secure lock screen when a protected app is launched.</li>
+      </ul>
+      <p>All permissions are used <strong>solely</strong> for providing the app-locking feature.</p>
 
       <h2>4. Privacy</h2>
       <p>Please review our <a href="applocker_privacy.html">Privacy Policy</a>. We do not collect or transmit personal data through the App.</p>
@@ -64,7 +90,7 @@
       <p>We may update these Terms from time to time. We will notify you via the App or our site. Continued use after updates constitutes acceptance of the revised Terms.</p>
 
       <h2>10. Contact</h2>
-      <p>Email: <a href="mailto:onlyapp.contact@gmail.com">onlyapp.contact@gmail.com</a></p>
+      <p>Email: <a href="mailto:support@onlyapps.dev">support@onlyapps.dev</a></p>
 
       <p class="footer">© 2025 AppLocker. All rights reserved.</p>
     </div>
