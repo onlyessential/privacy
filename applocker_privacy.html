@@ -3,102 +3,167 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>AppLocker — Privacy Policy</title>
+  <title>Privacy Policy • AppLock</title>
+  <meta name="description" content="Privacy Policy for AppLock by OnlyZero. AppLock runs on-device, does not collect personal data, and uses permissions only to provide app-locking features." />
   <style>
-    :root { --bg:#0f1115; --card:#161a22; --text:#e8eefc; --muted:#97a3b6; --accent:#F64C17; }
+    :root{
+      --bg:#0b0b10;
+      --card:#14161a;
+      --text:#e8eaed;
+      --muted:#aab0b7;
+      --accent:#F64C17; /* your brand orange */
+      --border:#22252b;
+    }
     *{box-sizing:border-box}
-    body{margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,"Noto Sans",sans-serif; color:var(--text); background:linear-gradient(180deg, #0f1115, #0b0d12);}
-    .wrap{max-width:860px; margin:40px auto; padding:24px;}
-    .card{background:var(--card); border:1px solid #252b36; border-radius:16px; padding:28px; box-shadow:0 10px 30px rgba(0,0,0,.25);}
-    h1{margin:0 0 8px; font-weight:800; letter-spacing:.2px;}
-    .subtitle{color:var(--muted); margin:0 0 24px;}
-    h2{margin-top:28px; border-left:4px solid var(--accent); padding-left:12px;}
-    p{line-height:1.65; color:var(--text);}
-    ul{line-height:1.7; color:var(--text)}
-    a{color:#aad1ff; text-decoration:none; border-bottom:1px dashed #5a83bf}
-    a:hover{color:white; border-bottom-color:white}
-    .footer{margin-top:28px; color:var(--muted); font-size:.95rem}
-    .brand{display:flex; align-items:center; gap:12px; margin-bottom:18px;}
-    .badge{background:rgba(246,76,23,.12); color:var(--accent); border:1px solid rgba(246,76,23,.35); padding:4px 10px; border-radius:999px; font-weight:600; font-size:.85rem}
-    .important {
-      background: rgba(246, 76, 23, 0.08);
-      border-left: 4px solid var(--accent);
-      padding: 16px 18px;
-      border-radius: 8px;
-      margin: 18px 0;
-      color: var(--text);
-      line-height: 1.7;
+    body{
+      margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,'Noto Sans',sans-serif;
+      background:var(--bg); color:var(--text); line-height:1.6;
     }
-    .important strong { color: var(--accent); }
-    .toplink {
-      text-align: right;
-      margin-bottom: 20px;
-      font-size: 0.95rem;
+    header, main, footer{max-width:900px; margin:auto; padding:24px}
+    header{padding-top:48px}
+    h1{font-size:2rem; margin:0 0 8px}
+    .subtitle{color:var(--muted); margin:0 0 24px}
+    section{
+      background:var(--card); border:1px solid var(--border);
+      border-radius:16px; padding:20px; margin:16px 0;
     }
-    .toplink a {
-      color: var(--accent);
-      text-decoration: none;
-      border-bottom: 1px dashed rgba(246,76,23,0.4);
+    h2{font-size:1.25rem; margin:0 0 12px}
+    h3{font-size:1.05rem; margin:12px 0 8px}
+    ul{margin:8px 0 0 20px}
+    code, .pill{
+      background:#1b1f24; border:1px solid var(--border); color:var(--text);
+      padding:2px 8px; border-radius:999px; font-size:.875rem
     }
-    .toplink a:hover {
-      color: white;
-      border-bottom-color: white;
+    a{color:var(--accent); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .kicker{display:flex; gap:8px; flex-wrap:wrap; margin:12px 0}
+    .muted{color:var(--muted)}
+    footer{padding-bottom:64px; color:var(--muted)}
+    .summary{
+      border-left:4px solid var(--accent); padding-left:14px; margin-top:8px
     }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <div class="card">
-
-      <div class="toplink">
-        See also: <a href="applocker_terms.html">Terms &amp; Conditions</a>
-      </div>
-
-      <div class="brand">
-        <h1>Privacy Policy</h1>
-        <span class="badge">AppLocker</span>
-      </div>
-      <p class="subtitle"><strong>Last updated:</strong> October 2025</p>
-
-      <h2>1. Overview</h2>
-      <p>AppLocker (“the App”, “we”, “us”) respects your privacy. This policy explains how your information is handled. We do not collect, store, or share personal data of any kind.</p>
-
-      <h2>2. Information We Collect</h2>
-      <p>AppLocker does not collect or store any personally identifiable information. The App may use temporary system data to detect open apps and enforce lock protection — all processed locally on your device. No data is transmitted to external servers.</p>
-
-      <h2>3. Permissions Used</h2>
-
-      <div class="important">
-        ⚠️ <strong>AccessibilityService Usage:</strong><br><br>
-        AppLocker uses the <strong>AccessibilityService API</strong> solely to detect when a locked app is opened and display the lock screen.<br><br>
-        This service is <strong>optional</strong> and activated only after your explicit consent via a clear two-button dialog.<br><br>
-        We <strong>never log, record, or share</strong> any on-screen content or user interactions.<br><br>
-        The Accessibility permission is not used for advertising, analytics, or any kind of data collection.
-      </div>
-
-      <ul>
-        <li><strong>Usage Access Permission:</strong> Checks which app is active to enforce protection. Data stays on your device.</li>
-        <li><strong>Overlay Permission:</strong> Allows showing the secure lock overlay over other apps.</li>
-      </ul>
-
-      <h2>4. Data Sharing</h2>
-      <p>AppLocker does not share, sell, or transmit any user information to any third party.</p>
-
-      <h2>5. Security</h2>
-      <p>The App operates entirely on your device. We use Android’s built-in security layers to help protect your data, but users are encouraged to keep their device software updated and secured.</p>
-
-      <h2>6. Children’s Privacy</h2>
-      <p>AppLocker is not directed toward children under 13. We do not knowingly collect or store information from minors.</p>
-
-      <h2>7. Changes to This Policy</h2>
-      <p>We may revise this policy periodically. Updated versions will appear in-app and on our official website.</p>
-
-      <h2>8. Contact</h2>
-      <p>For any questions or concerns, please contact us at:</p>
-      <p>Email: <a href="mailto:onlyapp.contact@gmail.com">onlyapp.contact@gmail.com</a></p>
-
-      <p class="footer">© 2025 AppLocker. All rights reserved.</p>
+  <header>
+    <h1>Privacy Policy for AppLock</h1>
+    <p class="subtitle"><strong>Developer:</strong> OnlyZero &nbsp;•&nbsp; <strong>Contact:</strong> <a href="mailto:onlyapp.contact@gmail.com">onlyapp.contact@gmail.com</a><br>
+    <span class="muted">Last updated: October 25, 2025</span></p>
+    <div class="kicker">
+      <span class="pill">No data collection</span>
+      <span class="pill">Runs on-device</span>
+      <span class="pill">No analytics/ads SDKs</span>
+      <span class="pill">Permissions are optional & revocable</span>
     </div>
-  </div>
+  </header>
+
+  <main>
+    <section id="overview">
+      <h2>1) Overview</h2>
+      <p>AppLock helps you secure selected apps on your Android device. All core functionality runs <strong>locally on your device</strong>. We do <strong>not</strong> collect, store, or share personal data with external servers or third parties.</p>
+    </section>
+
+    <section id="permissions">
+      <h2>2) Permissions We Use &amp; Why</h2>
+
+      <h3>2.1 Accessibility Service (Optional)</h3>
+      <p><strong>Purpose:</strong> Detect when a protected app is opened and display the lock screen overlay to prevent unauthorized access.</p>
+      <ul>
+        <li><strong>We do not</strong> read or record on-screen text, chat content, passwords, or typed input.</li>
+        <li><strong>We do not</strong> capture screenshots, screen content, audio, or camera input.</li>
+        <li>All accessibility signals are processed <strong>locally</strong> and are <strong>not transmitted</strong>.</li>
+      </ul>
+      <p><strong>Control:</strong> Enable/disable anytime in your device’s Accessibility settings.</p>
+
+      <h3>2.2 Device Administrator (Optional; Anti-Uninstall)</h3>
+      <p><strong>Purpose:</strong> Prevent uninstallation when <em>Anti-Uninstall Protection</em> is enabled.</p>
+      <ul>
+        <li><strong>We do not</strong> wipe your device, reset passwords, or change system configurations.</li>
+      </ul>
+      <p><strong>Control:</strong> Revoke Device Admin anytime in system settings.</p>
+
+      <h3>2.3 Usage Access (Optional; Alternative Detection Method)</h3>
+      <p><strong>Purpose:</strong> Determine which app is currently in the foreground so AppLock knows when to show the lock screen.</p>
+      <ul>
+        <li>No usage data leaves your device.</li>
+        <li>We do not store, sell, or share app usage information.</li>
+      </ul>
+      <p><strong>Control:</strong> Grant or revoke in <em>Usage Access</em> settings.</p>
+
+      <h3>2.4 Overlay / “Display Over Other Apps”</h3>
+      <p><strong>Purpose:</strong> Show the AppLock lock screen on top of protected apps.</p>
+      <ul>
+        <li>The overlay is purely visual and <strong>does not capture</strong> the underlying screen or content.</li>
+      </ul>
+      <p><strong>Control:</strong> Toggle in system settings.</p>
+
+      <h3>2.5 Notifications (Optional)</h3>
+      <p><strong>Purpose:</strong> Provide reminders or status notifications related to protection features.</p>
+      <ul>
+        <li>We do <strong>not</strong> read, store, or analyze the content of your notifications.</li>
+      </ul>
+      <p><strong>Control:</strong> Manage via system notification settings.</p>
+    </section>
+
+    <section id="collection">
+      <h2>3) Data Collection, Storage, and Sharing</h2>
+      <ul>
+        <li><strong>No personal data is collected.</strong></li>
+        <li><strong>No data is transmitted</strong> to our servers (AppLock does not operate servers).</li>
+        <li>App configuration (e.g., protected apps, preferences) is stored <strong>only on your device</strong>.</li>
+        <li>No analytics or advertising SDKs are used.</li>
+        <li>No information is sold or shared.</li>
+      </ul>
+    </section>
+
+    <section id="third-parties">
+      <h2>4) Third-Party Services</h2>
+      <p>AppLock does <strong>not</strong> integrate third-party analytics, advertising, or tracking services.</p>
+    </section>
+
+    <section id="control">
+      <h2>5) Your Choices &amp; Controls</h2>
+      <ul>
+        <li>All permissions are <strong>optional</strong> (some features may require them).</li>
+        <li>You can revoke any permission at any time in device settings.</li>
+        <li>You can uninstall AppLock at any time (ensure Anti-Uninstall is disabled first).</li>
+      </ul>
+    </section>
+
+    <section id="children">
+      <h2>6) Children’s Privacy</h2>
+      <p>We do not collect personal information from anyone, including children under 13.</p>
+    </section>
+
+    <section id="security">
+      <h2>7) Data Security</h2>
+      <p>AppLock relies on Android’s sandboxing and permission model. Because AppLock operates locally and does not transmit your data, exposure risk is minimized.</p>
+    </section>
+
+    <section id="changes">
+      <h2>8) Policy Changes</h2>
+      <p>We may update this Policy to reflect improvements or legal changes. Updates will be posted here with an updated “Last updated” date.</p>
+    </section>
+
+    <section id="contact">
+      <h2>9) Contact Us</h2>
+      <p>If you have any questions about privacy or permissions, contact:</p>
+      <p><strong>OnlyZero</strong><br>
+         <a href="mailto:onlyapp.contact@gmail.com">onlyapp.contact@gmail.com</a></p>
+    </section>
+
+    <section id="summary" class="summary">
+      <h2>Summary</h2>
+      <p>AppLock runs <strong>on-device</strong>. We collect <strong>no data</strong> and share <strong>no data</strong>. Permissions are used <strong>only</strong> to provide app-locking features and can be <strong>revoked anytime</strong>.</p>
+    </section>
+  </main>
+
+  <footer>
+    <small>&copy; <span id="year"></span> OnlyZero. All rights reserved.</small>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
